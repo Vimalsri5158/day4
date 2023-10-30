@@ -1,6 +1,6 @@
-// 1.Do the below programs in anonymous function & IIFE
+1.Do the below programs in anonymous function & IIFE
 
-    // 1.Print odd numbers in an array
+    1.Print odd numbers in an array
 
         // Anonymous Function
         const printOddNumbers = function(arr) {
@@ -22,7 +22,7 @@
 
 
     
-    // 2.Convert all the strings to title caps in a string array
+    2.Convert all the strings to title caps in a string array
         
         // Anonymous Function
         const convertToTitleCaps = function(arr) {
@@ -40,7 +40,7 @@
         })(["apple", "banana", "cherry"]);
 
     
-    // 3.Sum of all numbers in an array
+    3.Sum of all numbers in an array
 
         const sumOfNumbers = function(arr) {
             return arr.reduce(function(total, num) {
@@ -49,8 +49,9 @@
         }
         
         console.log(sumOfNumbers([1, 2, 3, 4, 5]));
+
         
-    // 4.Return all the prime numbers in an array
+    4.Return all the prime numbers in an array
             
         const isPrime = function(num) {
             if (num <= 1) return false;
@@ -70,8 +71,9 @@
         
         console.log(primeNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
+
     
-    // 5.Return all the palindromes in an array
+    5.Return all the palindromes in an array
 
         const isPalindrome = function(str) {
             str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -89,7 +91,7 @@
 
         
 
-    // 6.Return median of two sorted arrays of the same size.
+    6.Return median of two sorted arrays of the same size.
 
         // Anonymous Function
         const findMedianSortedArrays = function(nums1, nums2) {
@@ -100,12 +102,12 @@
         } else {
         return mergedArray[middle];
         }
-    };
-    
-    console.log(findMedianSortedArrays([1, 3], [2, 4]));
+        };
+        console.log(findMedianSortedArrays([1, 3], [2, 4]));
+
 
     
-    // 7.Remove duplicates from an array
+    7.Remove duplicates from an array
 
         // Anonymous Function
         const removeDuplicates = function(arr) {
@@ -115,25 +117,26 @@
         console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
 
         
-    // 8.Rotate an array by k times
+    8.Rotate an array by k times
         
         // Anonymous Function
-const rotateArray = function(arr, k) {
+        const rotateArray = function(arr, k) {
         if (k > 0) {
         const removed = arr.splice(arr.length - k);
         arr.unshift(...removed);
         }
         return arr;
-    };
+        };
     
     console.log(rotateArray([1, 2, 3, 4, 5], 2));
 
 
 
 
-// 2.Do the below programs in arrow functions.
+2.Do the below programs in arrow functions.
 
-        // 1.Print odd numbers in an array
+        1.Print odd numbers in an array
+
             const printOddNumbers = (arr) => {
                 arr.forEach((num) => {
                 if (num % 2 !== 0) {
@@ -141,11 +144,10 @@ const rotateArray = function(arr, k) {
                 }
                 });
             };
-            
             printOddNumbers([1, 2, 3, 4, 5]);
 
 
-            // 2.Convert all the strings to title caps in a string array
+        2.Convert all the strings to title caps in a string array
                 const convertToTitleCaps = (arr) => {
                     return arr.map((str) => {
                     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
@@ -155,7 +157,8 @@ const rotateArray = function(arr, k) {
                 const result = convertToTitleCaps(["apple", "banana", "cherry"]);
                 console.log(result);
 
-            // 3.Sum of All Numbers in an Array:
+
+        3.Sum of All Numbers in an Array:
                     const sumOfNumbers = (arr) => {
                         return arr.reduce((total, num) => total + num, 0);
                     };
@@ -163,7 +166,7 @@ const rotateArray = function(arr, k) {
                     console.log(sumOfNumbers([1, 2, 3, 4, 5]));
                     
                 
-            // 4.Return All Prime Numbers in an Array:
+        4.Return All Prime Numbers in an Array:
                 const isPrime = (num) => {
                     if (num <= 1) return false;
                     for (let i = 2; i <= Math.sqrt(num); i++) {
@@ -181,7 +184,7 @@ const rotateArray = function(arr, k) {
                 console.log(primeNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
                 
 
-            // 5.Return All Palindromes in an Array:
+        5.Return All Palindromes in an Array:
                 const isPalindrome = (str) => {
                     str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
                     const reversed = str.split("").reverse().join("");
